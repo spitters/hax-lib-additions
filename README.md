@@ -25,4 +25,4 @@ import Hax
 
 ## License
 
-Apache License 2.0 (see original [libcrux-lean-specs](https://github.com/spitters/libcrux-lean-specs)).
+MIT License (see [LICENSE](LICENSE)).
