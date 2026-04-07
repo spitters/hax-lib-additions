@@ -33,7 +33,7 @@ instance {α n} : RustSetAt (Vector α n) α where
   setAt a i v := if h: i < a.size then pure (Vector.set a i v) else .fail (.arrayOutOfBounds)
 
 instance (priority := low) {α} : RustSetAt (Array α) α where
-  setAt a i v := if h: i < a.size then pure (a.setIfInBounds i v) else .fail (.arrayOutOfBounds)
+  setAt a i v := if i < a.size then pure (a.setIfInBounds i v) else .fail (.arrayOutOfBounds)
 
 def Rust_primitives.Hax.Monomorphized_update_at.update_at_usize {C V} [RustSetAt C V]
   (a: C) (i:Nat) (v:V) : RustM C := RustSetAt.setAt a i v
