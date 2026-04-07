@@ -1,3 +1,7 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 attribute [grind =_] Int8.ofNat_le_iff_le
 attribute [grind =_] Int16.ofNat_le_iff_le
 attribute [grind =_] Int32.ofNat_le_iff_le

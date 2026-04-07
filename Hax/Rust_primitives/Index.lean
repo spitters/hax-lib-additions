@@ -1,3 +1,7 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Rust_primitives.Range
 import Hax.Rust_primitives.RustM
 import Hax.Rust_primitives.Num
@@ -9,14 +13,12 @@ open Std.Do
 
 set_option mvcgen.warning false
 
-/-
-
-# Polymorphic index access
+/-!
+# Polymorphic Index Access
 
 Hax introduces polymorphic index accesses, for any integer type (returning a
 single value) and for ranges (returning an array of values). A typeclass-based
-notation `a[i]_?` is introduced to support panicking lookups
-
+notation `a[i]_?` is introduced to support panicking lookups.
 -/
 
 /--

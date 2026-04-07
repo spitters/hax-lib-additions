@@ -1,3 +1,7 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Tactic.Init
 import Hax.MissingLean.Init.While
 import Std.Tactic.Do
@@ -5,15 +9,14 @@ import Std.Tactic.Do
 open Std.Do
 open Std.Tactic
 
-/-
-# Monadic encoding
+/-!
+# RustM Monad
 
-The encoding is based on the `RustM` monad: all rust computations are wrapped
+The encoding is based on the `RustM` monad: all Rust computations are wrapped
 in the monad, representing the fact that they are not total.
 
 It borrows some definitions from the Aeneas project
-(https://github.com/AeneasVerif/aeneas/)
-
+(https://github.com/AeneasVerif/aeneas/).
 -/
 
 /--

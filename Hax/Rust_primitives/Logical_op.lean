@@ -1,9 +1,11 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Tactic.Init
 import Hax.Rust_primitives.RustM
 
-/-
-  Logic predicates introduced by Hax (in pre/post conditions)
--/
+/-! Boolean operators (`&&?`, `||?`, `!?`) for hax-generated pre/post conditions. -/
 section Logic
 
 namespace Rust_primitives.Hax.Logical_op

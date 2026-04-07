@@ -1,15 +1,17 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Rust_primitives.RustM
 import Hax.Rust_primitives.Tuple
 import Hax.Rust_primitives.Num
 
 open Rust_primitives.Hax
 
-/-
+/-!
+# Vectors and Slices
 
-# Vectors
-
-Rust vectors are represented as Lean Arrays (variable size)
-
+Rust vectors and slices are represented as Lean `Array` (variable size).
 -/
 section RustVectors
 

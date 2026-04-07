@@ -1,11 +1,11 @@
 /-
-Hax Lean Backend - Cryspen
-
-Support for integer operations
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
 -/
-
 import Hax.Rust_primitives
 import Hax.Core_models.Extracted
+
+/-! Checked arithmetic operations and `From`/`TryFrom` conversions for all Rust integer types. -/
 open Std.Do
 open Std.Tactic
 

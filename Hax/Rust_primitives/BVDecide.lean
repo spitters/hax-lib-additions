@@ -1,14 +1,16 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Rust_primitives.RustM
 
 open Std.Do
 
-/-
-
+/-!
 # BV_Decide Lemmas
 
-In the following, we define an encoding of the entire `RustM` monad so that we can run `bv_decide`
-on equalities between `RustM` values.
-
+Encodes the `RustM` monad into `BVRustM` so that `bv_decide` can reason about
+equalities between `RustM` values.
 -/
 
 /-- We encode `RustM` values into the following structure to be able to run `bv_decide`: -/

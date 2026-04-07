@@ -1,4 +1,7 @@
-
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Core_models.Extracted
 
 set_option mvcgen.warning false

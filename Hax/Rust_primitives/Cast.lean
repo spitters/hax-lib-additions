@@ -1,10 +1,14 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Rust_primitives.Num
 import Hax.Tactic.Init
 
-/-
-
+/-!
 # Casts
 
+Rust `as` casts modeled as partial functions returning `RustM`.
 -/
 section Cast
 

@@ -1,6 +1,7 @@
-
--- Experimental lean backend for Hax
--- The Hax prelude library can be found in hax/proof-libs/lean
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.MissingCore
 import Std.Tactic.Do
 import Std.Do.Triple

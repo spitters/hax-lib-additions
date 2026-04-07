@@ -1,13 +1,13 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Std.Do
 import Hax.Rust_primitives.RustM
 
 open Std.Do
 
-/-
-
-# Specs
-
--/
+/-! Hax specification contracts bundling requires/ensures with Hoare triples. -/
 
 structure Spec {α}
     (requires : RustM Prop)

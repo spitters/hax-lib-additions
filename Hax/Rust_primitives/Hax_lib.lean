@@ -1,7 +1,13 @@
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Rust_primitives.Tuple
 import Hax.Rust_primitives.RustM
 
 open Rust_primitives.Hax
+
+/-! Hax library helpers: `assert`, `assume`, and proposition constructors. -/
 
 namespace Hax_lib
 

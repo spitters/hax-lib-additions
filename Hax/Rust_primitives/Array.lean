@@ -1,4 +1,7 @@
-
+/-
+Copyright (c) 2025 Cryspen, 2026 CatCrypt Contributors. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+-/
 import Hax.Rust_primitives.RustM
 import Hax.Rust_primitives.Num
 import Hax.Rust_primitives.Range
@@ -8,12 +11,10 @@ open Std.Do
 
 set_option mvcgen.warning false
 
-/-
-
+/-!
 # Arrays
 
-Rust arrays, are represented as Lean `Vector` (Lean Arrays of known size)
-
+Rust arrays are represented as Lean `Vector` (arrays of known size).
 -/
 section RustArray
 
