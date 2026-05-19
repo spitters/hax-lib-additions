@@ -132,7 +132,10 @@ theorem Nat.getElemArrayResult_spec
   ⦃ ⌜ True ⌝ ⦄
   ( a[i]_? )
   ⦃ ⇓ r => ⌜ r = a[i] ⌝ ⦄ :=
-  by mvcgen [RustM.ofOption, Nat.instGetElemResultArray]
+  by
+    unfold getElemResult Nat.instGetElemResultArray
+    mvcgen
+    simp [h]
 
 @[spec]
 theorem Nat.getElemVectorResult_spec
@@ -140,7 +143,10 @@ theorem Nat.getElemVectorResult_spec
   ⦃ ⌜ True ⌝ ⦄
   ( a[i]_? )
   ⦃ ⇓ r => ⌜ r = a[i] ⌝ ⦄ :=
-  by mvcgen [Nat.instGetElemResultVector]
+  by
+    unfold getElemResult Nat.instGetElemResultVector
+    mvcgen
+    simp [h]
 
 @[spec]
 theorem usize.getElemArrayResult_spec
@@ -148,7 +154,11 @@ theorem usize.getElemArrayResult_spec
   ⦃ ⌜ True ⌝ ⦄
   ( a[i]_? )
   ⦃ ⇓ r => ⌜ r = a[i.toNat] ⌝ ⦄ :=
-  by mvcgen [usize.instGetElemResultArray]
+  by
+    unfold getElemResult usize.instGetElemResultArray
+    mvcgen
+    simp [h]
+    rfl
 
 @[spec]
 theorem usize.getElemVectorResult_spec
@@ -156,7 +166,10 @@ theorem usize.getElemVectorResult_spec
   ⦃ ⌜ True ⌝ ⦄
   ( a[i]_? )
   ⦃ ⇓ r => ⌜ r = a[i.toNat] ⌝ ⦄ :=
-  by mvcgen [usize.instGetElemResultVector]
+  by
+    unfold getElemResult usize.instGetElemResultVector
+    mvcgen
+    simp [h]
 
 @[spec]
 theorem Range.getElemArrayUSize64_spec
@@ -167,9 +180,11 @@ theorem Range.getElemArrayUSize64_spec
   ( a[(Range.mk s e)]_? )
   ⦃ ⇓ r => ⌜ r = Array.extract a s e ⌝ ⦄
 := by
-  intros
-  mvcgen [Core.Ops.Index.Index.index, Range.instGetElemResultArrayUSize64]
-  grind [USize64.le_iff_toNat_le]
+  intros hse hea
+  have hse' : s ≤ e := USize64.le_iff_toNat_le.mpr hse
+  unfold getElemResult Range.instGetElemResultArrayUSize64
+  simp [hse', hea]
+  mvcgen
 
 @[spec]
 theorem Range.getElemVectorUSize64_spec
@@ -180,6 +195,8 @@ theorem Range.getElemVectorUSize64_spec
   ( a[(Range.mk s e)]_? )
   ⦃ ⇓ r => ⌜ r = (Vector.extract a s e).toArray ⌝ ⦄
 := by
-  intros
-  mvcgen [Core.Ops.Index.Index.index, Range.instGetElemResultVectorUSize64]
-  grind [USize64.le_iff_toNat_le]
+  intros hse hea
+  have hse' : s ≤ e := USize64.le_iff_toNat_le.mpr hse
+  unfold getElemResult Range.instGetElemResultVectorUSize64
+  simp [hse', hea]
+  mvcgen
