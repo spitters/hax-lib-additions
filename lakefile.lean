@@ -13,4 +13,4 @@ lean_lib «Hax» where
   srcDir := "."
 
 require Qq from git
-  "https://github.com/leanprover-community/quote4" @ "707efb56d0696634e9e965523a1bbe9ac6ce141d"
+  "https://github.com/leanprover-community/quote4" @ "92c15be17b7caf78c2ad767ec40f89052d908d81"
